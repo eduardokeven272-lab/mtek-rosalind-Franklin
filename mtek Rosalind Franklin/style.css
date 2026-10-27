@@ -1,0 +1,102 @@
+/* ===== BASE ===== */
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 85% 0%,#25203d 0%,transparent 55%),#0c101b;color:#f1f1fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+button{font:inherit}
+button:focus-visible{outline:2px solid #dacbff;outline-offset:4px}
+svg{display:block;width:100%;height:auto}
+.wrap{max-width:1120px;margin:0 auto;padding:90px 24px 80px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Títulos e textos */
+h1{font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.15;letter-spacing:-1.5px;margin:0 0 20px}
+.avatar,.card h2,.block h2,.sci h3,.panel h2{font-family:"Iowan Old Style",Georgia,serif;font-weight:400}
+.eyebrow{color:#c4adff;font-size:11px;letter-spacing:2px;font-weight:700;margin:0 0 20px}
+.title-dot{color:#c4adff}
+.sub{color:#a7b0c5;font-size:17px;line-height:1.8;max-width:65ch;margin:0 0 40px}
+
+/* ===== CARD (tela inicial) ===== */
+#view-card{transition:opacity .35s,transform .35s}
+.card{display:flex;align-items:center;gap:40px;width:100%;min-height:380px;padding:48px;background:linear-gradient(130deg,#20283b,#151c2c);border:1px solid #2a344a;border-radius:24px;box-shadow:0 24px 65px #0003;color:#f1f1fa;font:inherit;text-align:left;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.card:hover{transform:translateY(-5px);border-color:#a793ed;background:#20283b;box-shadow:0 28px 65px #0005}
+.card:focus-visible{outline:2px solid #6FA8DC;outline-offset:3px}
+.avatar{flex:none;display:flex;align-items:center;justify-content:center;width:145px;height:170px;border-radius:24px;background:linear-gradient(145deg,#c4adff,#8e7bd0);box-shadow:inset 0 0 0 1px #ffffff30;font-size:48px;color:#0B1117}
+.card h2{font-size:clamp(32px,4vw,46px);margin:0 0 8px}
+.card p{margin:0 0 16px;max-width:65ch;font-size:17px;line-height:1.8;color:#C6D4DE}
+.card .years{margin:0 0 12px;font-size:15px;color:#b2a4d2}
+.cta{display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:12px 20px;background:#c4adff17;border:1px solid #c4adff40;border-radius:10px;font-size:15px;color:#dacbff}
+
+/* ===== TELA DE DETALHES ===== */
+#view-dna{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;overflow:auto;background:radial-gradient(ellipse at 90% 0%,#25203d,transparent 60%),#0c101b;opacity:0;pointer-events:none;transform:scale(.15);transform-origin:var(--ox,50%) var(--oy,50%);transition:transform .6s cubic-bezier(.22,.61,.36,1),opacity .4s}
+#view-dna.open{opacity:1;pointer-events:auto;transform:scale(1)}
+.dna-inner{width:100%;max-width:1120px;margin:0 auto;padding:0 24px 60px}
+
+/* Barra do topo */
+.dna-top{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-bottom:12px;padding:22px 0 14px;background:rgba(12,16,27,.92);box-shadow:0 0 0 100vmax rgba(12,16,27,.92);clip-path:inset(0 -100vmax)}
+.jump{display:flex;flex-wrap:wrap;gap:8px}
+.back,.jump button,.toolbar button{font-size:13px;color:#f1f1fa;background:transparent;border:1px solid #2a344a;border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .18s,border-color .18s}
+.back:hover,.jump button:hover,.toolbar button:hover,.chip:hover{background:#2a2541;border-color:#a793ed}
+
+/* Seções */
+.block{margin-top:64px;scroll-margin-top:84px}
+.block .eyebrow{margin-bottom:10px}
+.block h2{margin:0 0 24px;font-size:clamp(26px,3.4vw,36px);line-height:1.2;letter-spacing:-.8px}
+.context{margin:20px 0 28px;padding:20px 24px;background:#151c2ccc;border:1px solid #2a344a;border-left:3px solid #a793ed;border-radius:14px;font-size:14px;line-height:1.85;color:#C6D4DE}
+.context b{color:#f1f1fa;font-weight:500}
+.note{margin-top:18px}
+
+/* Quem foi ela */
+.bio-grid,.stage-row{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;align-items:start}
+.panel.ficha{min-height:0}
+.bio-text p{margin:0 0 16px;max-width:65ch;font-size:16px;line-height:1.85;color:#C6D4DE}
+.timeline{margin:40px 0 0;padding:0 0 0 22px;list-style:none;border-left:2px solid #2a344a}
+.timeline li{position:relative;padding:0 0 22px 18px;font-size:15px;line-height:1.7;color:#C6D4DE}
+.timeline li::before{content:"";position:absolute;left:-28px;top:8px;width:10px;height:10px;border-radius:50%;background:#a793ed;box-shadow:0 0 0 4px #0c101b}
+.timeline b{display:inline-block;min-width:46px;margin-right:8px;font-weight:600;color:#dacbff;font-variant-numeric:tabular-nums}
+
+/* A ciência dela */
+.sci-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.sci{padding:24px;background:#151c2c;border:1px solid #2a344a;border-top:3px solid #a793ed;border-radius:18px;box-shadow:0 12px 35px #0002}
+.sci.carvao{border-top-color:#E6A23C}
+.sci.virus{border-top-color:#5FBF7E}
+.sci.honra{border-top-color:#4E9FE0}
+.sci .tag{margin:0 0 8px;font-size:11px;font-weight:700;line-height:1.4;letter-spacing:1.5px;text-transform:uppercase;color:#a7b0c5}
+.sci h3{margin:0 0 10px;font-size:22px;line-height:1.25;letter-spacing:-.3px}
+.sci p{margin:0 0 12px;font-size:15px;line-height:1.8;color:#C6D4DE}
+
+/* A hélice */
+.stage{position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#24233e,#101724 75%);border:1px solid #2a344a;border-radius:20px;box-shadow:0 18px 50px #0003}
+#stage{min-height:280px}
+#cam{transition:transform .9s cubic-bezier(.22,.61,.36,1)}
+.toolbar{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 16px;background:linear-gradient(to top,rgba(11,17,23,.92),rgba(11,17,23,0));font-size:13px;color:#a7b0c5}
+.rung{cursor:pointer}
+.rung:focus{outline:none}
+.rung:focus-visible rect.hit{stroke:#fff;stroke-width:1.5;stroke-dasharray:3 3}
+.rung,.strand{transition:opacity .5s}
+.rung .bar{transition:filter .18s,stroke-width .18s}
+.dim .rung:not(.sel),.dim .strand:not(.sel){opacity:.1}
+.rung:hover,.rung:focus-visible{opacity:1!important}
+.rung:hover .bar,.rung:focus-visible .bar{filter:brightness(1.35);stroke-width:10px}
+.sel .bar{filter:none}
+
+/* Painel de informações, ficha e legenda */
+.panel{min-height:320px;padding:22px;background:#151c2c;border:1px solid #2a344a;border-radius:20px;box-shadow:0 12px 35px #0002}
+.panel h2{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:25px;letter-spacing:-.5px}
+.panel p{margin:0 0 14px;font-size:15px;line-height:1.8;color:#C6D4DE}
+.dot{flex:none;width:12px;height:12px;border-radius:50%}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid #2a344a}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid #2a344a;font-size:13px}
+.facts b{font-weight:500;color:#f1f1fa}
+.facts span{color:#a7b0c5;text-align:right}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;background:#151c2c;border:1px solid #2a344a;border-radius:999px;font-size:13px;color:#f1f1fa;cursor:pointer;transition:background .2s,border-color .2s}
+
+/* ===== CELULAR (até 860px) ===== */
+@media (max-width:860px){
+  .wrap{padding-top:48px}
+  .card{flex-direction:column;align-items:flex-start;gap:24px;min-height:0;padding:28px}
+  .avatar{width:90px;height:105px;font-size:34px}
+  .card p{font-size:15px}
+  .stage-row,.bio-grid,.sci-grid{grid-template-columns:1fr}
+  .panel{min-height:0}
+  .block{margin-top:48px}
+}

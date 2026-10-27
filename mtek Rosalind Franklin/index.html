@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosalind Franklin — a foto que revelou o DNA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TELA 1: cartão -->
+<div class="wrap" id="view-card">
+  <p class="eyebrow">CIÊNCIA DELAS · MULHERES QUE TRANSFORMARAM O MUNDO</p><h1>Mulheres na ciência<span class="title-dot">.</span></h1>
+  <p class="sub">Clique para ver como o trabalho de uma cientista, feito nos bastidores e sem crédito na época, se tornou a peça que faltava para decifrar a molécula da vida.</p>
+
+  <button class="card" id="openBtn" type="button">
+    <span class="avatar">RF</span>
+    <span>
+      <h2>Rosalind Franklin</h2>
+      <p class="years">1920–1958 · Cristalografia de raios-X</p>
+      <p>Suas imagens de difração de raios-X foram a evidência experimental decisiva de que o DNA tinha forma de hélice — mas o reconhecimento por isso só veio décadas depois de sua morte.</p>
+      <span class="cta">Ver a descoberta →</span>
+    </span>
+  </button>
+</div>
+
+<!-- TELA 2: hélice -->
+<div id="view-dna">
+  <div class="dna-inner">
+
+    <div class="dna-top">
+      <button class="back" id="backBtn" type="button">← Voltar</button>
+      <nav class="jump" aria-label="Seções">
+        <button type="button" data-to="bio">Quem foi ela</button>
+        <button type="button" data-to="ciencia">A ciência dela</button>
+        <button type="button" data-to="helice">A hélice</button>
+      </nav>
+    </div>
+
+    <p class="eyebrow">PERFIL · 1920–1958</p>
+    <h1>Rosalind Franklin</h1>
+    <p class="sub">Química e cristalógrafa britânica cujo trabalho foi central para entender a estrutura do DNA, de vírus e do carvão. Seu papel na descoberta do DNA só foi amplamente reconhecido depois da morte.</p>
+
+    <!-- 1. QUEM FOI ELA -->
+    <section class="block" id="bio">
+      <p class="eyebrow">01 · QUEM FOI ELA</p>
+      <h2>Uma menina que fazia contas por prazer</h2>
+
+      <div class="bio-grid">
+        <div class="bio-text">
+          <p>Rosalind Elsie Franklin nasceu em Londres, em 25 de julho de 1920, numa família judia britânica rica e influente. Desde criança se destacava: aos seis anos, uma tia a descrevia como assustadoramente inteligente, sempre fazendo contas por diversão. Estudou numa das poucas escolas femininas de Londres que ensinavam física e química e se tornou fluente em francês.</p>
+          <p>Era direta, rigorosa e muito apegada aos dados: preferia esperar as evidências antes de propor um modelo. Os colegas a chamavam de "Rosy" pelas costas, apelido de que ela não gostava.</p>
+        </div>
+        <aside class="panel ficha">
+          <ul class="facts">
+            <li><b>Nascimento</b><span>25/07/1920, Londres</span></li>
+            <li><b>Morte</b><span>16/04/1958 (37 anos)</span></li>
+            <li><b>Formação</b><span>Newnham College, Cambridge</span></li>
+            <li><b>Áreas</b><span>Cristalografia de raios-X</span></li>
+          </ul>
+        </aside>
+      </div>
+
+      <ol class="timeline">
+        <li><b>1938</b>Entra no Newnham College, em Cambridge, para estudar química.</li>
+        <li><b>1945</b>Doutora-se em físico-química, com uma tese sobre o carvão.</li>
+        <li><b>1947</b>Vai a Paris e aprende com Jacques Mering a aplicar raios-X a materiais sem cristais regulares.</li>
+        <li><b>1951</b>Chega ao King's College London e passa a estudar o DNA.</li>
+        <li><b>1953</b>Muda-se para o Birkbeck College e passa a estudar vírus.</li>
+        <li><b>1958</b>Morre em 16 de abril, aos 37 anos.</li>
+      </ol>
+    </section>
+
+    <!-- 2. A CIÊNCIA DELA -->
+    <section class="block" id="ciencia">
+      <p class="eyebrow">02 · A CIÊNCIA DELA</p>
+      <h2>Do carvão aos vírus, passando pelo DNA</h2>
+
+      <div class="sci-grid">
+        <article class="sci carvao">
+          <p class="tag">Carvão e grafite · 1942–1951</p>
+          <h3>Os buracos do carvão</h3>
+          <p>Estudou a porosidade do carvão com hélio e relacionou os poros à permeabilidade, o que ajudou a classificar carvões para combustível e para itens de guerra, como máscaras de gás. Criou os termos carbonos grafitizáveis e não grafitizáveis.</p>
+        </article>
+        <article class="sci dna">
+          <p class="tag">DNA · 1951–1953</p>
+          <h3>A câmara, as duas formas e a Foto 51</h3>
+          <p>No King's College, com o aluno Raymond Gosling, construiu uma câmara com umidade controlada e descobriu duas formas do DNA: a A, mais seca e curta, e a B, mais úmida, longa e fina. Em 1951 apresentou indícios de uma estrutura helicoidal com os fosfatos do lado de fora, e a Foto 51, tirada por Gosling em 1952, mostra a forma B.</p>
+        </article>
+        <article class="sci virus">
+          <p class="tag">Vírus · 1953–1958</p>
+          <h3>Vírus por dentro</h3>
+          <p>No Birkbeck, estudou vírus com J. D. Bernal. Mostrou que as partículas do vírus do mosaico do tabaco têm todas o mesmo comprimento e, com colegas, que sua capa de proteína é helicoidal e que o RNA fica enrolado por dentro. Em 1958, montou um modelo de 1,5 m desse vírus para a Expo de Bruxelas.</p>
+        </article>
+        <article class="sci honra">
+          <p class="tag">Reconhecimento</p>
+          <h3>Depois da morte</h3>
+          <p>Em 1962, Crick, Watson e Wilkins receberam o Nobel de Fisiologia ou Medicina; Franklin havia morrido em 1958 e as regras da época não permitiam prêmio póstumo. Seu colega Aaron Klug ganhou o Nobel de Química de 1982 por um trabalho na linha do que ela iniciou. Hoje ela dá nome ao Rosalind Franklin Institute e a um rover da ESA.</p>
+        </article>
+      </div>
+
+      <div class="context note">
+        <b>E o crédito?</b> Há debate histórico sobre como os dados de Franklin chegaram a Watson e Crick: em janeiro de 1953, Wilkins mostrou a Watson a Foto 51, e em fevereiro Max Perutz deu a Crick um relatório com cálculos dela. Uns dizem que ela não recebeu o crédito devido; outros, como os historiadores Matthew Cobb e Nathaniel Comfort (2023), que as equipes trocavam informações e ela foi contribuidora ativa. É consenso que os dados experimentais dela foram usados no modelo de 1953.
+      </div>
+    </section>
+
+    <!-- 3. A HÉLICE -->
+    <section class="block" id="helice">
+      <p class="eyebrow">03 · A ESTRUTURA</p>
+      <h2>A molécula que a Foto 51 revelou</h2>
+      <div class="context">
+        A <b>Foto 51</b>, feita por Gosling em 1952 sob a direção de Franklin, mostra o padrão em X típico de uma hélice e deu base ao modelo de Watson e Crick de 1953. Clique em um par de bases, em uma fita ou na legenda para explorar.
+      </div>
+
+      <div class="stage-row">
+        <div class="stage">
+          <svg id="stage" viewBox="0 0 760 340" role="img" aria-label="Modelo interativo de uma dupla hélice de DNA">
+            <g id="cam">
+              <g id="helix"></g>
+            </g>
+          </svg>
+          <div class="toolbar">
+            <button id="reset" type="button" hidden>Afastar</button>
+            <span id="hint">Clique em qualquer parte da hélice</span>
+          </div>
+        </div>
+        <aside class="panel" id="infoPanel" aria-live="polite"></aside>
+      </div>
+      <div class="legend" id="legend"></div>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
