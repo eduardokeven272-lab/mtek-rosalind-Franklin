@@ -7,34 +7,34 @@
   const PAIR = { A:"T", T:"A", G:"C", C:"G" };
 
   const DEFAULT = {
-    name: "Dupla hélice", color: "#a7b0c5",
+    name: "Dupla hélice", color: "#7a857c",
     text: "A estrutura que a Foto 51 tornou visível: duas fitas complementares enroladas uma na outra, bases emparelhadas voltadas para dentro. O padrão em X da imagem de Franklin correspondia exatamente a essa geometria.",
     facts: [["Volta completa","~10 pares de base"],["Passo da hélice","3,4 nm"],["Diâmetro","2 nm"]]
   };
 
   const INFO = {
     bb: {
-      name: "Esqueleto de açúcar-fosfato", color: "#a793ed",
+      name: "Esqueleto de açúcar-fosfato", color: "#2f3e36",
       text: "A parte estrutural da fita: um grupo fosfato ligado a uma desoxirribose, repetidos milhares de vezes. Esse padrão repetitivo, visto nos raios-X de Franklin, sugeria a regularidade de uma hélice.",
       facts: [["Componentes","fosfato + desoxirribose"],["Ligação","fosfodiéster"],["Sentido","5' → 3'"]]
     },
     A: {
-      name: "Adenina", color: "#5FBF7E",
+      name: "Adenina", color: "#5b8c5a",
       text: "Base púrica, com dois anéis fundidos. Pareia exclusivamente com a timina.",
       facts: [["Tipo","purina (2 anéis)"],["Par","timina"],["Pontes de H","2"]]
     },
     T: {
-      name: "Timina", color: "#E6A23C",
+      name: "Timina", color: "#d4a017",
       text: "Base pirimídica, de um anel só. Parceira fixa da adenina. No RNA ela é substituída pela uracila.",
       facts: [["Tipo","pirimidina (1 anel)"],["Par","adenina"],["Pontes de H","2"]]
     },
     G: {
-      name: "Guanina", color: "#E2694C",
+      name: "Guanina", color: "#c8553d",
       text: "Base púrica de dois anéis. Forma três pontes de hidrogênio com a citosina, um encaixe mais firme que o par A–T.",
       facts: [["Tipo","purina (2 anéis)"],["Par","citosina"],["Pontes de H","3"]]
     },
     C: {
-      name: "Citosina", color: "#4E9FE0",
+      name: "Citosina", color: "#2e7d9a",
       text: "Base pirimídica de um anel, sempre pareada com a guanina. Alvo comum de metilação na regulação genética.",
       facts: [["Tipo","pirimidina (1 anel)"],["Par","guanina"],["Pontes de H","3"]]
     }
@@ -96,7 +96,7 @@
     const bar = b => el("line", { class:"bar", stroke:INFO[b].color, "stroke-linecap":"round" });
     const r = {
       x, top, b1: bar(top), b2: bar(bot),
-      hb: el("line", { stroke:"#9FB4C4", "stroke-width":1, "stroke-dasharray":"2 3", opacity:.5 }),
+      hb: el("line", { stroke:"#8a8272", "stroke-width":1, "stroke-dasharray":"2 3", opacity:.5 }),
       hit: el("rect", { class:"hit", fill:"transparent", width:22, rx:6, style:"cursor:pointer" })
     };
     r.g = el("g", { class:"rung", tabindex:"0", role:"button", "aria-label":`Par de bases ${top}–${bot}` }, r.b1, r.b2, r.hb, r.hit);
